@@ -224,5 +224,9 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
     'fondo5.jpg',
     'fondo6.jpg'
   ];
+
+  const fondoElegido = fondos[Math.floor(Math.random() * fondos.length)];
+  document.body.style.backgroundImage = `url('${fondoElegido}')`;
+</script>
 </body>
 </html>

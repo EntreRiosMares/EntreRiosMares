@@ -18,19 +18,21 @@
 
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-size: cover;
-background-position: center;
-background-attachment: fixed;
-background-repeat: no-repeat;
-transition: background-image 1s ease-in-out;
-      background-size: cover;
-      color: #fff;
-      text-align: center;
-    }
+   body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('tu-imagen.jpg'); /* Asegurate de poner la ruta real */
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  color: #fff;
+  text-align: center;
+
+  animation: zoomBackground 12s ease-in-out infinite;
+}
 
     .overlay {
       background: rgba(0, 0, 0, 0.6);
@@ -247,4 +249,5 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 </script>
 </body>
 </html>
+
 

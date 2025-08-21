@@ -130,8 +130,25 @@
     }
 
 .titulo-principal {
+  display: inline-block;
+  font-size: 2.5rem; /* Ajusta según tu diseño */
+  font-weight: bold;
   text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
 }
+
+.titulo-principal span {
+  display: inline-block;
+  transition: transform 0.6s ease;
+}
+
+.flip {
+  transform: rotateY(360deg);
+}
+
+.rotate {
+  transform: rotate(20deg);
+}
+    
 
 .especial {
   font-family: 'Arial', sans-serif;
@@ -168,7 +185,7 @@
 </head>
 <body>
   <div class="overlay">
-    <h1 class="titulo-principal">Entre Ríos Mares</h1>
+    <h1 class="titulo-principal" id="titulo-animado">Entre Ríos Mares</h1>
     <div class="animated-text"> Guionista. Investigador. Publicidad. </div>
  <div class="Subtitulo2-text"> Scriptwriter, researcher & copywriter </div>
    <div class="description especial">
@@ -270,9 +287,42 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 
   const fondoElegido = fondos[Math.floor(Math.random() * fondos.length)];
   document.body.style.backgroundImage = `url('${fondoElegido}')`;
+
+
+  const titulo = document.querySelector(".titulo-principal");
+  const texto = titulo.textContent;
+  titulo.innerHTML = "";
+
+  // Convertimos cada letra en un <span>
+  texto.split("").forEach(letra => {
+    const span = document.createElement("span");
+    span.textContent = letra;
+    titulo.appendChild(span);
+  });
+
+  const letras = titulo.querySelectorAll("span");
+
+  function animarLetra() {
+    const randomIndex = Math.floor(Math.random() * letras.length);
+    const randomEfecto = Math.random() > 0.5 ? "flip" : "rotate";
+    const letra = letras[randomIndex];
+
+    letra.classList.add(randomEfecto);
+
+    // Quitar la animación después de un tiempo
+    setTimeout(() => letra.classList.remove(randomEfecto), 800);
+
+    // Intervalo aleatorio entre 3 y 8 segundos
+    const randomDelay = [3000, 5000, 8000][Math.floor(Math.random() * 3)];
+    setTimeout(animarLetra, randomDelay);
+  }
+
+  animarLetra();
+    
 </script>
 </body>
 </html>
+
 
 
 

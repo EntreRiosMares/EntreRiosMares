@@ -390,10 +390,10 @@ setTimeout(() => {
     const rotate = (Math.random() - 0.5) * 10; // ±5deg
 
     ave.style.transition = 'transform 0.5s ease';
-    ave.style.transform = `translate(${dx}px, ${dy}px) rotate(${rotate}deg)`;
+    ave.style.transform = `scale(1) translate(${dx}px, ${dy}px) rotate(${rotate}deg)`;
 
     setTimeout(() => {
-      ave.style.transform = 'translate(0, 0) rotate(0deg)';
+      ave.style.transform = 'scale(1) translate(0, 0) rotate(0deg)';
     }, 500);
   }, 3000); // cada 3s
 }, 6000); // coincide con la duración de la animación "volar"
@@ -415,6 +415,7 @@ Todos los derechos reservados | Este sitio está hecho por <a target="_blank">En
             </div>
 </body>
 </html>
+
 
 
 

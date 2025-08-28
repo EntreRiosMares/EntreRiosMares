@@ -50,6 +50,7 @@
   background: url('https://pngimg.com/uploads/pigeon/pigeon_PNG3426.png') no-repeat center/contain;
   left: calc(100% - 240px); /* misma posición final de la rama */
   top: calc(100% - 180px);
+   opacity: 0; /* invisible al inicio */
   z-index: 21;
 }
   @keyframes volar {
@@ -405,6 +406,8 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
   const aveInner = document.querySelector('.ave-inner');
 
 setTimeout(() => {
+     aveInner.style.transition = 'opacity 0.5s ease';
+  aveInner.style.opacity = '1';
   setInterval(() => {
     const dx = (Math.random() - 0.5) * 10;
     const dy = (Math.random() - 0.5) * 6;
@@ -436,6 +439,7 @@ Todos los derechos reservados | Este sitio está hecho por <a target="_blank">En
             </div>
 </body>
 </html>
+
 
 
 

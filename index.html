@@ -17,49 +17,53 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
+    /* 🔹 Rama y Ave */
+    .rama {
+      position: absolute;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+      height: 18px;
+      background: #4a2c2a;
+      border-radius: 10px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+    }
 
-                
-  .rama {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 280px;
-    height: 18px;
-    background: #4a2c2a;
-    border-radius: 10px;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
-  }
-
-  .ave {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Blackbird_flying_icon.svg/256px-Blackbird_flying_icon.svg.png') no-repeat center/contain;
-    left: -120px; /* arranca fuera de pantalla */
-    top: 100px;
-    animation: volar 5s ease-in-out forwards;
-  }
-
-  @keyframes volar {
-    0% {
-      left: -120px;
+    .ave {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Blackbird_flying_icon.svg/256px-Blackbird_flying_icon.svg.png') no-repeat center/contain;
+      left: -120px; /* arranca fuera de pantalla */
       top: 100px;
-      transform: scale(0.5) rotate(-10deg);
+      animation: volar 5s ease-in-out forwards;
     }
-    70% {
-      left: 50%;
-      top: 140px;
-      transform: scale(1) rotate(10deg);
+
+    @keyframes volar {
+      0% {
+        left: -120px;
+        top: 100px;
+        transform: scale(0.5) rotate(-10deg);
+      }
+      70% {
+        left: 50%;
+        top: 140px;
+        transform: scale(1) rotate(10deg);
+      }
+      100% {
+        left: 50%;
+        top: calc(100% - 160px); /* justo arriba de la rama */
+        transform: scale(1) rotate(0deg);
+      }
     }
-    100% {
-      left: 50%;
-      top: calc(100% - 160px); /* justo arriba de la rama */
-      transform: scale(1) rotate(0deg);
-    }
-  }
-              
+  </style>
+       <style>       
     
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
    body {
@@ -390,6 +394,7 @@ Todos los derechos reservados | Este sitio está hecho por <a target="_blank">En
             </div>
 </body>
 </html>
+
 
 
 

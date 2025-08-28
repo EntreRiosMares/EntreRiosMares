@@ -379,6 +379,30 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
   animarLetra();
     
 </script>
+  <script>
+const ave = document.querySelector('.ave');
+
+function moverAvePequeño() {
+  // Movimiento random dentro de un rango pequeño
+  const dx = (Math.random() - 0.5) * 10; // horizontal ±5px
+  const dy = (Math.random() - 0.5) * 6;  // vertical ±3px
+  const rotate = (Math.random() - 0.5) * 10; // rotación ±5deg
+
+  // Aplica transformación
+  ave.style.transform = `translate(${dx}px, ${dy}px) rotate(${rotate}deg)`;
+  
+  // Vuelve a la posición original después de un tiempo corto
+  setTimeout(() => {
+    ave.style.transform = `translate(0px, 0px) rotate(0deg)`;
+  }, 500); // 0.5 segundos
+}
+
+// Cada 3 a 8 segundos, movimiento random
+setInterval(() => {
+  const delay = Math.random() * (8000 - 3000) + 3000;
+  moverAvePequeño();
+}, 3000); // llamamos cada 3s, el delay interno random hace que no sea predecible
+</script>
   <div class="copy-right_text">
                 <div class="container">
                     <div class="footer_border"></div>
@@ -395,6 +419,7 @@ Todos los derechos reservados | Este sitio está hecho por <a target="_blank">En
             </div>
 </body>
 </html>
+
 
 
 

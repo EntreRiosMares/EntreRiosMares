@@ -34,15 +34,16 @@
     box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
   }
 
-    .ave {
-      position: absolute;
-      width: 70px;
-      height: 70px;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Blackbird_flying_icon.svg/256px-Blackbird_flying_icon.svg.png') no-repeat center/contain;
-      left: -120px; /* arranca fuera de pantalla */
-      top: 100px;
-      animation: volar 5s ease-in-out forwards;
-    }
+  .ave {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background: url('https://pngimg.com/uploads/pigeon/pigeon_PNG3426.png') no-repeat center/contain;
+    left: -120px; /* arranca fuera de pantalla */
+    top: 100px;
+    animation: volar 6s ease-in-out forwards;
+    z-index: 20;
+  }
 
     @keyframes volar {
       0% {
@@ -393,6 +394,7 @@ Todos los derechos reservados | Este sitio está hecho por <a target="_blank">En
             </div>
 </body>
 </html>
+
 
 
 

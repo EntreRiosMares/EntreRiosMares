@@ -22,8 +22,7 @@
       font-family: Arial, sans-serif;
     }
 
-    /* 🔹 Rama y Ave */
-    .rama {
+   .rama {
     position: fixed;
     bottom: 80px;
     right: 40px;   /* 👉 rama al costado derecho */
@@ -32,6 +31,7 @@
     background: #4a2c2a;
     border-radius: 10px;
     box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+    z-index: 10;
   }
 
   .ave {
@@ -45,23 +45,24 @@
     z-index: 20;
   }
 
-    @keyframes volar {
-      0% {
-        left: -120px;
-        top: 100px;
-        transform: scale(0.5) rotate(-10deg);
-      }
-      70% {
-        left: 50%;
-        top: 140px;
-        transform: scale(1) rotate(10deg);
-      }
-      100% {
-        left: 50%;
-        top: calc(100% - 160px); /* justo arriba de la rama */
-        transform: scale(1) rotate(0deg);
-      }
+  @keyframes volar {
+    0% {
+      left: -120px;
+      top: 100px;
+      transform: scale(0.5) rotate(-10deg);
     }
+    70% {
+      left: 60%;
+      top: 140px;
+      transform: scale(1) rotate(10deg);
+    }
+    100% {
+      /* 🔹 Ajustado para que quede sobre la rama */
+      left: calc(100% - 240px); /* se posa cerca del final de la rama */
+      top: calc(100% - 180px);  /* alineado con la altura de la rama */
+      transform: scale(1) rotate(0deg);
+    }
+  }
   </style>
        <style>       
     
@@ -394,6 +395,7 @@ Todos los derechos reservados | Este sitio está hecho por <a target="_blank">En
             </div>
 </body>
 </html>
+
 
 
 
